@@ -1,124 +1,219 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bilge Güneş | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
   <style>
     :root {
-      --bg: #0f172a;
-      --card: #1e293b;
+      --bg: #0b0f19;
+      --surface: #131b2e;
+      --border: rgba(255, 255, 255, 0.08);
       --text: #f8fafc;
       --muted: #94a3b8;
       --primary: #38bdf8;
       --accent: #818cf8;
+      --success: #34d399;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       background-color: var(--bg);
       color: var(--text);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
+      line-height: 1.6;
+      padding: 40px 20px;
     }
-    .card {
-      background-color: var(--card);
-      border-radius: 20px;
-      padding: 40px;
-      max-width: 600px;
-      width: 100%;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    header {
       text-align: center;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 36px;
+      padding: 32px 20px;
+      background: var(--surface);
+      border-radius: 20px;
+      border: 1px solid var(--border);
     }
+
     h1 {
       font-size: 2.2rem;
       font-weight: 700;
-      margin-bottom: 8px;
-      background: linear-gradient(to right, var(--primary), var(--accent));
+      background: linear-gradient(135deg, var(--primary), var(--accent));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
     }
-    p.subtitle {
+
+    .subtitle {
       color: var(--muted);
       font-size: 1.05rem;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
-    .badge-container {
+
+    .tags {
       display: flex;
       justify-content: center;
       gap: 10px;
       flex-wrap: wrap;
-      margin-bottom: 30px;
     }
-    .badge {
+
+    .tag {
       background: rgba(56, 189, 248, 0.1);
       color: var(--primary);
-      border: 1px solid rgba(56, 189, 248, 0.3);
+      border: 1px solid rgba(56, 189, 248, 0.25);
       padding: 6px 14px;
       border-radius: 999px;
       font-size: 0.85rem;
       font-weight: 600;
     }
-    .status {
-      background: rgba(255, 255, 255, 0.03);
-      border-radius: 12px;
-      padding: 16px;
-      margin-bottom: 30px;
+
+    h2 {
+      font-size: 1.25rem;
+      margin: 32px 0 16px 0;
+      color: var(--text);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--surface);
+      padding: 22px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: var(--primary);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .badge-status {
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+      background: rgba(52, 211, 153, 0.15);
+      color: var(--success);
+    }
+
+    .card-desc {
       color: var(--muted);
       font-size: 0.95rem;
-      line-height: 1.6;
+      margin-bottom: 14px;
     }
+
+    .tech-stack {
+      font-size: 0.82rem;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
     .links {
       display: flex;
       justify-content: center;
-      gap: 16px;
+      gap: 14px;
+      margin-top: 36px;
     }
+
     .btn {
       text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 10px;
-      font-size: 0.9rem;
+      padding: 12px 24px;
+      border-radius: 12px;
       font-weight: 600;
+      font-size: 0.95rem;
       transition: all 0.2s ease;
     }
+
     .btn-primary {
       background: var(--primary);
-      color: #0f172a;
+      color: #0b0f19;
     }
+
     .btn-secondary {
-      background: transparent;
-      border: 1px solid var(--muted);
+      background: var(--surface);
       color: var(--text);
+      border: 1px solid var(--border);
     }
+
     .btn:hover {
-      transform: translateY(-2px);
       opacity: 0.9;
     }
   </style>
 </head>
+
 <body>
-  <div class="card">
-    <h1>Bilge Güneş</h1>
-    <p class="subtitle">Software Engineering Student &amp; Developer</p>
-    <div class="badge-container">
-      <span class="badge">Flutter</span>
-      <span class="badge">Computer Vision</span>
-      <span class="badge">Edge AI</span>
-      <span class="badge">Python</span>
+  <div class="container">
+    <header>
+      <h1>Bilge Güneş</h1>
+      <p class="subtitle">Software Engineering Student | Mobile &amp; Edge AI Enthusiast</p>
+      <div class="tags">
+        <span class="tag">Flutter</span>
+        <span class="tag">Computer Vision</span>
+        <span class="tag">PyTorch</span>
+        <span class="tag">YOLOv8</span>
+        <span class="tag">Edge AI</span>
+      </div>
+    </header>
+
+    <h2>🚀 Öne Çıkan Çalışmalar</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">📱 Mobil Çözümler &amp; Flutter Mimarisi</div>
+          <span class="badge-status">Aktif Geliştirme</span>
+        </div>
+        <p class="card-desc">Modern State Management ve temiz mimari pratikleriyle geliştirilen mobil kullanıcı
+          arayüzleri.</p>
+        <div class="tech-stack">Flutter • Dart • REST API • Clean Architecture</div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">🧠 Edge AI &amp; Nesne Tespiti</div>
+          <span class="badge-status">Ar-Ge</span>
+        </div>
+        <p class="card-desc">Görüntü işleme ve derin öğrenme modellerinin mobil uç cihazlarda optimize çalışması üzerine
+          prototipler.</p>
+        <div class="tech-stack">Python • OpenCV • YOLOv8 • PyTorch</div>
+      </div>
     </div>
-    <div class="status">
-      🚀 Kişisel portfolyo web sitem şu anda geliştirilme aşamasındadır.<br />
-      Projelerimi ve güncellemelerimi çok yakında buradan takip edebilirsiniz!
-    </div>
+
     <div class="links">
-      <a href="https://github.com/bilgegunes" class="btn btn-primary">GitHub Profilim</a>
-      <a href="https://www.linkedin.com" class="btn btn-secondary">LinkedIn</a>
+      <a href="https://github.com/bilgegunes" target="_blank" class="btn btn-primary">GitHub Profilim</a>
+      <a href="mailto:bilgeggunes@gmail.com" class="btn btn-secondary">İletişime Geç</a>
     </div>
   </div>
 </body>
+
 </html>
