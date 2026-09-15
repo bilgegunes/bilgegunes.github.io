@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bilge Güneş | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --primary: #38bdf8;
+      --accent: #818cf8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .card {
+      background-color: var(--card);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      background: linear-gradient(to right, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p.subtitle {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 24px;
+    }
+    .badge-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    .badge {
+      background: rgba(56, 189, 248, 0.1);
+      color: var(--primary);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .status {
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 30px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+    .btn {
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: #0f172a;
+    }
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid var(--muted);
+      color: var(--text);
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Bilge Güneş</h1>
+    <p class="subtitle">Software Engineering Student &amp; Developer</p>
+    <div class="badge-container">
+      <span class="badge">Flutter</span>
+      <span class="badge">Computer Vision</span>
+      <span class="badge">Edge AI</span>
+      <span class="badge">Python</span>
+    </div>
+    <div class="status">
+      🚀 Kişisel portfolyo web sitem şu anda geliştirilme aşamasındadır.<br />
+      Projelerimi ve güncellemelerimi çok yakında buradan takip edebilirsiniz!
+    </div>
+    <div class="links">
+      <a href="https://github.com/bilgegunes" class="btn btn-primary">GitHub Profilim</a>
+      <a href="https://www.linkedin.com" class="btn btn-secondary">LinkedIn</a>
+    </div>
+  </div>
+</body>
+</html>
